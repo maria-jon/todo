@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import SingleTodo from '@/components/SingleTodo.vue';
 
 const todos = ref<string[]>([]);
 
@@ -13,11 +14,9 @@ function addTodo() {
 <template>
   <main>
     <div>
-      <ul v-if="todos.length > 0">
-        <li v-for="(todo, index) in todos" :key="index">
-          {{ todo }}
-        </li>
-      </ul>
+      <div v-if="todos.length > 0" v-for="(todo, index) in todos" :key="index">
+        <SingleTodo :todo-text="todo" />
+      </div>
 
       <p v-if="todos.length === 0">Du är klar med alla uppgifter!</p>
     </div>
