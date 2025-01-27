@@ -1,20 +1,28 @@
 # todo
 
-This template should help get you started developing with Vue 3 in Vite.
+Todo-app created with Vite and Vue.
 
-## Recommended IDE Setup
+## Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- User can add todo-tasks to app and mark them as done
+- Todo-tasks are saved in localStorage
 
-## Type Support for `.vue` Imports in TS
+## Tech Stack
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white) ![Prettier](https://img.shields.io/badge/prettier-%23F7B93E.svg?style=for-the-badge&logo=prettier&logoColor=black)
 
-## Customize configuration
+- Vite version 6.0.11
+- Vue version 3.5.13
+- Vue-router version 4.5.0
+- Pinia version 2.3.1
+- TypeScript version 5.7.3
+- Sass version 1.83.4
+- ESLint version 9.18.0
+- Prettier version 3.4.2
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Installation
 
-## Project Setup
+> [!IMPORTANT] Recommended IDE setup: [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
 ```sh
 npm install
@@ -37,3 +45,7 @@ npm run build
 ```sh
 npm run lint
 ```
+
+## Authors
+
+- [@maria-jon](https://www.github.com/maria-jon)
