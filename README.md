@@ -22,7 +22,8 @@ Todo-app created with Vite and Vue.
 
 ## Installation
 
-> [!IMPORTANT] Recommended IDE setup: [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+> [!IMPORTANT]
+> Recommended IDE setup: [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
 ```sh
 npm install
