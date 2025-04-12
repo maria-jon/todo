@@ -13,10 +13,8 @@ interface ITodo {
 const DEBUGGING = import.meta.env.DEV;
 const nextId = ref(0);
 
-
 // Skapa vårt store med namnet "todos"
 export const useTodosStore = defineStore('todos', () => {
-
   // Denna array bestående av ITodos kommer att innehålla våra todos
   const todos = ref<ITodo[]>([]);
 
