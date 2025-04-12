@@ -1,13 +1,16 @@
-# todo
+# Todo
 
 To-do-app created with Vite and Vue as a school project.
 
 [Link to live version](https://maria-jon.github.io/todo/)
 
+![Screenshot of app](/public/screenshot.png)
+
 ## Features
 
 - User can add tasks to app, mark them as done, and delete them
-- Todo-tasks are saved in localStorage
+- To-do tasks are saved in localStorage
+- User can filter tasks depending on status
 
 ## Tech Stack
 
