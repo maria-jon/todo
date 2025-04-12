@@ -3,7 +3,6 @@ import pluginJs from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import pluginVue from 'eslint-plugin-vue';
 import stylistic from '@stylistic/eslint-plugin';
-import stylisticTs from '@stylistic/eslint-plugin-ts';
 
 /*
 Sample dependencies:
@@ -33,7 +32,6 @@ export default [
   {
     plugins: {
       '@stylistic': stylistic,
-      '@stylistic/ts': stylisticTs,
     },
     rules: {
       '@stylistic/array-bracket-newline': ['error', { minItems: 4, multiline: true }],
