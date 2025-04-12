@@ -65,12 +65,20 @@ export const useTodosStore = defineStore('todos', () => {
     }
   }
 
+  function deleteTodo(id: number): void {
+    const index = todos.value.findIndex(todo => todo.id === id);
+    if (index) {
+      todos.value.splice(index, 1)
+      saveTodosToLocalStorage();
+    }
+  }
+
   // Fetch to-dos when running app
   onMounted(() => {
     getTodosFromLocalStorage();
   });
 
-  return { todos, addNewTodo, toggleTodoState };
+  return { todos, addNewTodo, toggleTodoState, deleteTodo };
 });
 
 // Applies changes made during development

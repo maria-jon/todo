@@ -23,6 +23,9 @@ function toggleCompletedState() {
 
   todoStore.toggleTodoState(props.id, isDone.value);
 }
+function deleteSingleTodo() {
+  todoStore.deleteTodo(props.id);
+}
 </script>
 
 <template>
@@ -33,6 +36,7 @@ function toggleCompletedState() {
         <span v-if="isDone">Mark as undone</span>
         <span v-if="!isDone">Mark as done</span>
       </button>
+      <button @click="deleteSingleTodo">Delete</button>
     </span>
   </div>
 </template>
