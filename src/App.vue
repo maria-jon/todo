@@ -5,7 +5,10 @@ import { RouterLink, RouterView } from 'vue-router';
 <template>
   <header>
     <div class="wrapper">
-      <h1>To-do</h1>
+      <div class="header">
+        <img src="/android-chrome-512x512.png" width="512" height="512" alt="checkmark">
+        <h1>To-do</h1>
+      </div>
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
@@ -17,10 +20,21 @@ import { RouterLink, RouterView } from 'vue-router';
   <RouterView />
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 header {
   background-color: #e2e2df;
   padding: 1rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+img {
+  max-height: 1.8rem;
+  width: auto;
 }
 
 h1 {
