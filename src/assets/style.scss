@@ -1,5 +1,5 @@
 body {
-  background-color: #383a3e;
+  background-color: #cf8d53;
   display: flex;
   justify-content: center;
   font-family: 'Fredoka', sans-serif;
@@ -56,6 +56,8 @@ a:hover {
 
 #app {
   width: 90%;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 main {
