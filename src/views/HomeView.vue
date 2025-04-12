@@ -26,6 +26,8 @@ function clearMessage() {
 
 <template>
   <main>
+    <input type="text" v-model="todoName" @keyup.enter="addTodo" />
+    <button @click="addTodo">Add to-do</button>
     <div>
       <p v-if="showCompletedMessage">Well done!</p>
 
@@ -35,8 +37,6 @@ function clearMessage() {
 
       <p v-if="todos.length === 0">Nothing to do! Take a break ☕</p>
     </div>
-    <input type="text" v-model="todoName" @keyup.enter="addTodo" />
-    <button @click="addTodo">Add to-do</button>
   </main>
 </template>
 
