@@ -30,8 +30,8 @@ function toggleCompletedState() {
     <div>{{ todoText }}</div>
     <div>
       <button @click="toggleCompletedState">
-        <span v-if="isDone">Avmarkera som klar</span>
-        <span v-if="!isDone">Markera som klar</span>
+        <span v-if="isDone">Mark as undone</span>
+        <span v-if="!isDone">Mark as done</span>
       </button>
     </div>
   </div>
