@@ -2,6 +2,8 @@
 
 To-do-app created with Vite and Vue as a school project.
 
+[Link to live version](https://maria-jon.github.io/todo/)
+
 ## Features
 
 - User can add tasks to app, mark them as done, and delete them
