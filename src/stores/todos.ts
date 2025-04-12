@@ -43,7 +43,7 @@ export const useTodosStore = defineStore('todos', () => {
     localStorage.setItem('todos', stringified);
 
     if (DEBUGGING) {
-      console.log('Save following to-dos in localStorage');
+      console.log('Saved following to-dos in localStorage:');
       console.table(todos.value);
     }
   }
@@ -53,12 +53,12 @@ export const useTodosStore = defineStore('todos', () => {
     nextId.value += 1;
 
     todos.value.push({ text, complete, id: nextId.value });
-
     saveTodosToLocalStorage();
   }
 
   function toggleTodoState(id: number, isComplete: boolean): void {
     const item = todos.value.find(todo => todo.id === id);
+
     if (item) {
       item.complete = isComplete;
       saveTodosToLocalStorage();
@@ -68,7 +68,7 @@ export const useTodosStore = defineStore('todos', () => {
   function deleteTodo(id: number): void {
     const index = todos.value.findIndex(todo => todo.id === id);
     if (index >= 0) {
-      todos.value.splice(index, 1)
+      todos.value.splice(index, 1);
       saveTodosToLocalStorage();
     }
   }

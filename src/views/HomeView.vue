@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import SingleTodo from '@/components/SingleTodo.vue';
 import { useTodosStore } from '@/stores/todos.ts';
 import { storeToRefs } from 'pinia';
@@ -9,6 +9,17 @@ const { todos } = storeToRefs(todoStore);
 
 const todoName = ref('');
 const showCompletedMessage = ref(false);
+// const picked = ref('all');
+
+// Toggle for filtering
+const showCompletedOnly = ref(false)
+
+// Computed list based on toggle
+const filteredTodos = computed(() => {
+  return showCompletedOnly.value
+    ? todos.value.filter(todo => todo.complete)
+    : todos.value
+})
 
 function addTodo() {
   todoStore.addNewTodo(todoName.value, false);
@@ -36,9 +47,26 @@ function clearMessage() {
     </div>
     <div class="todo-list">
       <h2>My to-do-list</h2>
-      <div v-if="todos.length > 0" v-for="(todo, index) in todos" :key="index">
-        <SingleTodo :todo-text="todo.text" :complete="todo.complete" :id="todo.id" @task-completed="onTaskCompleted" />
+      <div class="filter">
+        <!--
+        <input type="radio" id="all" value="all" v-model="picked" />
+        <label for="all">All</label>
+        <input type="radio" id="undone" value="undone" v-model="picked" />
+        <label for="undone">Undone</label>
+        <input type="radio" id="done" value="done" v-model="picked" />
+        <label for="done">Done</label>
+        -->
+        <label>
+          <input type="checkbox" v-model="showCompletedOnly" />
+          Show completed only
+        </label>
       </div>
+
+      <ul>
+        <li v-for="todo in filteredTodos" :key="todo.id">
+          <SingleTodo :todo-text="todo.text" :complete="todo.complete" :id="todo.id" @task-completed="onTaskCompleted" />
+        </li>
+      </ul>
 
       <p v-if="todos.length === 0">Nothing to do! Take a break ☕</p>
     </div>
