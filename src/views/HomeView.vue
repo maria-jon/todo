@@ -39,3 +39,14 @@ function clearMessage() {
     <button @click="addTodo">Lägg till todo</button>
   </main>
 </template>
+
+<style scoped lang="scss">
+template {
+  margin: auto;
+}
+
+main {
+  background-color: #e2e2df;
+  max-width: 50%;
+}
+</style>
