@@ -34,7 +34,7 @@ nav {
 }
 
 a {
-  color: #e2e2df;
+  color: #e7dab1;
   background-color: #383a3e;
   padding: 0.5rem;
   transition: all 0.5s ease-out;
