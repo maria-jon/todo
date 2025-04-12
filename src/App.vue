@@ -27,7 +27,20 @@ h1 {
 }
 
 nav {
+  background-color: #383a3e;
   display: flex;
   justify-content: space-evenly;
+}
+
+a {
+  color: #e2e2df;
+  background-color: #383a3e;
+  padding: 0.5rem;
+  transition: all 0.5s ease-out;
+}
+
+a:hover {
+  background-color: #e7dab1;
+  color: #383a3e;
 }
 </style>
