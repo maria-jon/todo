@@ -31,10 +31,11 @@ function clearMessage() {
       <input type="text" v-model="todoName" @keyup.enter="addTodo" />
       <button @click="addTodo">Add to-do</button>
     </div>
+    <div class="todo-message">
+      <p v-if="showCompletedMessage">Well done completing that!</p>
+    </div>
     <div class="todo-list">
       <h2>My to-do-list</h2>
-      <p v-if="showCompletedMessage">Well done completing that!</p>
-
       <div v-if="todos.length > 0" v-for="(todo, index) in todos" :key="index">
         <SingleTodo :todo-text="todo.text" :complete="todo.complete" :id="todo.id" @task-completed="onTaskCompleted" />
       </div>
@@ -49,19 +50,18 @@ main {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 }
 
-.todo-input {
-  align-self: flex-end;
-}
 .todo-input > button {
   margin-left: 1rem;
 }
 
+.todo-message {
+  min-height: 3.5rem;
+}
 .todo-list {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  gap: 1rem;
 }
 </style>

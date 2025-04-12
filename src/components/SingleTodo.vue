@@ -26,19 +26,24 @@ function toggleCompletedState() {
 </script>
 
 <template>
-  <div :class="{ completed: isDone }" class="grid grid-cols-2 gap-2">
-    <div>{{ todoText }}</div>
-    <div>
+  <div :class="{ completed: isDone }" class="single-todo">
+    <span>{{ todoText }}</span>
+    <span>
       <button @click="toggleCompletedState">
         <span v-if="isDone">Mark as undone</span>
         <span v-if="!isDone">Mark as done</span>
       </button>
-    </div>
+    </span>
   </div>
 </template>
 
 <style scoped>
 .completed {
   text-decoration: line-through;
+}
+.single-todo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
 </style>
