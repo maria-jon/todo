@@ -28,7 +28,7 @@ p {
 
 button {
   background-color: #e7dab1;
-  border: none;
+  border: 2px solid #383a3e;
   border-radius: 0.5rem;
   padding: 0.5rem;
   font-family: inherit;
@@ -37,6 +37,12 @@ button {
 }
 button:hover {
   background-color: #cf8d53;
+}
+
+button:active {
+  background-color: #383a3e;
+  color: #e7dab1;
+  border: solid #cf8d53;
 }
 
 a {
