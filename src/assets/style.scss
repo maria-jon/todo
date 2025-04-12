@@ -10,3 +10,11 @@ p {
   color: #e7dab1;
 }
 */
+body {
+  display: flex;
+  justify-content: center;
+}
+
+#app {
+  width: 90%;
+}
