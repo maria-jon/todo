@@ -31,13 +31,15 @@ function deleteSingleTodo() {
 <template>
   <div :class="{ completed: isDone }" class="single-todo">
     <span>{{ todoText }}</span>
-    <span>
+    <div>
       <button @click="toggleCompletedState">
         <span v-if="isDone">Mark as undone</span>
         <span v-if="!isDone">Mark as done</span>
       </button>
+    </div>
+    <div>
       <button @click="deleteSingleTodo">Delete</button>
-    </span>
+    </div>
   </div>
 </template>
 
@@ -47,7 +49,7 @@ function deleteSingleTodo() {
 }
 .single-todo {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 </style>
