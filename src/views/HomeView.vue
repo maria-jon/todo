@@ -41,7 +41,5 @@ function clearMessage() {
 </template>
 
 <style scoped lang="scss">
-main {
-  background-color: #e2e2df;
-}
+
 </style>

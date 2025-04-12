@@ -1,5 +1,5 @@
 <template>
-  <div class="completed">
+  <main class="completed">
     <h2>Completed to-dos</h2>
-  </div>
+  </main>
 </template>
