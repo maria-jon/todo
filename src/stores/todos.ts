@@ -67,7 +67,7 @@ export const useTodosStore = defineStore('todos', () => {
 
   function deleteTodo(id: number): void {
     const index = todos.value.findIndex(todo => todo.id === id);
-    if (index) {
+    if (index >= 0) {
       todos.value.splice(index, 1)
       saveTodosToLocalStorage();
     }
