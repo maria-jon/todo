@@ -47,7 +47,6 @@ function clearMessage() {
 
 <style scoped lang="scss">
 main {
-  padding: 1rem;
   display: flex;
   flex-direction: column;
 }
