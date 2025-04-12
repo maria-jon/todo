@@ -1,5 +1,5 @@
 <template>
   <div class="completed">
-    <h2>Avklarade uppgifter</h2>
+    <h2>Completed to-dos</h2>
   </div>
 </template>

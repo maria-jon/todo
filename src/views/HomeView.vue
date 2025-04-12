@@ -27,16 +27,16 @@ function clearMessage() {
 <template>
   <main>
     <div>
-      <p v-if="showCompletedMessage">Snyggt jobbat med att göra klart en uppgift!</p>
+      <p v-if="showCompletedMessage">Well done!</p>
 
       <div v-if="todos.length > 0" v-for="(todo, index) in todos" :key="index">
         <SingleTodo :todo-text="todo.text" :complete="todo.complete" :id="todo.id" @task-completed="onTaskCompleted" />
       </div>
 
-      <p v-if="todos.length === 0">Du är klar med alla uppgifter!</p>
+      <p v-if="todos.length === 0">Nothing to do! Take a break ☕</p>
     </div>
     <input type="text" v-model="todoName" @keyup.enter="addTodo" />
-    <button @click="addTodo">Lägg till todo</button>
+    <button @click="addTodo">Add to-do</button>
   </main>
 </template>
 

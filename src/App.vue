@@ -5,11 +5,11 @@ import { RouterLink, RouterView } from 'vue-router';
 <template>
   <header>
     <div class="wrapper">
-      <h1>Att göra</h1>
+      <h1>To-do</h1>
       <nav>
-        <RouterLink to="/">Hem</RouterLink>
-        <RouterLink to="/about">Om</RouterLink>
-        <RouterLink to="/completed">Avklarade uppgifter</RouterLink>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/completed">Completed to-dos</RouterLink>
       </nav>
     </div>
   </header>
